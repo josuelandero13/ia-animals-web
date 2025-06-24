@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Identificador de Animales</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.0.4"></script>
+    <link rel="stylesheet" href="./src/assets/styles/style.css" />
+    <script type="module" src="src/app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Identificador de Animales</h1>
+        <p class="subtitle">
+          Sube una imagen de cualquier animal y descubre sus características,
+          hábitat, y si es venenoso
+        </p>
+      </header>
+
+      <div class="content">
+        <div class="upload-section" id="uploadSection">
+          <div class="upload-area" id="uploadArea">
+            <div class="upload-icon">🐾</div>
+            <p class="upload-text">
+              Arrastra y suelta una imagen aquí o
+              <span>haz clic para seleccionar</span>
+            </p>
+            <input type="file" id="fileInput" accept="image/*" />
+          </div>
+          <button class="upload-btn" id="uploadBtn">Seleccionar Imagen</button>
+        </div>
+
+        <div class="preview-section" id="previewSection">
+          <div class="preview-container">
+            <img id="previewImage" src="" alt="Vista previa" />
+            <div class="placeholder-image">Vista previa de la imagen</div>
+          </div>
+          <div class="action-buttons">
+            <button class="action-btn analyze-btn" id="analyzeBtn">
+              Analizar Imagen
+            </button>
+            <button class="action-btn reset-btn" id="resetBtn">
+              Cambiar Imagen
+            </button>
+          </div>
+        </div>
+
+        <div class="loading" id="loading">
+          <div class="spinner"></div>
+          <p class="loading-text">Analizando imagen, por favor espera...</p>
+        </div>
+
+        <div class="error" id="error"></div>
+
+        <div class="results-section" id="resultsSection">
+          <div class="results-header">
+            <h2>Resultados del Análisis</h2>
+            <p>Hemos identificado el animal en tu imagen</p>
+          </div>
+
+          <div class="animal-card">
+            <div class="animal-header">
+              <div class="animal-icon" id="animalIcon">🦁</div>
+              <div class="animal-name" id="animalName">León</div>
+              <div class="animal-confidence" id="animalConfidence">
+                97% de precisión
+              </div>
+            </div>
+
+            <div class="animal-content">
+              <div class="animal-info">
+                <div class="info-group">
+                  <div class="info-label">Tipo</div>
+                  <div class="info-value" id="animalType">Mamífero</div>
+                </div>
+
+                <div class="info-group">
+                  <div class="info-label">Venenoso</div>
+                  <div class="info-value" id="animalVenomous">
+                    <span class="not-venomous">❌ No venenoso</span>
+                  </div>
+                </div>
+
+                <div class="info-group">
+                  <div class="info-label">Hábitat</div>
+                  <div class="info-value" id="animalHabitat">
+                    Sabana africana
+                  </div>
+                </div>
+
+                <div class="info-group">
+                  <div class="info-label">Dieta</div>
+                  <div class="info-value" id="animalDiet">Carnívoro</div>
+                </div>
+              </div>
+
+              <div class="animal-image" id="animalImagePlaceholder">
+                Imagen representativa
+              </div>
+
+              <div class="animal-description" id="animalDescription">
+                El león es un gran felino carnívoro de la familia de los
+                félidos. Es el segundo felino viviente más grande después del
+                tigre. Los leones salvajes viven en el África subsahariana y en
+                Asia, con una población en peligro crítico al noroeste de la
+                India.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        Identificador de Animales &copy; 2023 | Usando TensorFlow.js para
+        reconocimiento de imágenes
+      </p>
+    </footer>
+  </body>
+</html>
