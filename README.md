@@ -3,15 +3,6 @@
 ## Descripción del Proyecto
 El Identificador de Animales es una aplicación web minimalista e interactiva que permite a los usuarios subir imágenes de animales para obtener información detallada sobre ellos. Utilizando inteligencia artificial en el navegador, la aplicación identifica el animal y muestra características como su tipo, si es venenoso, hábitat natural, dieta y una descripción detallada.
 
-## Características Principales
-- 🖼️ Subida intuitiva de imágenes mediante arrastrar y soltar o selección manual
-- 🤖 Reconocimiento en tiempo real usando TensorFlow.js y MobileNet
-- 🐍 Detección de animales venenosos con indicadores visuales claros
-- 📱 Diseño completamente responsive que funciona en móviles y desktop
-- 🎨 Interfaz minimalista con animaciones fluidas
-- 💾 Funcionamiento 100% en el navegador sin necesidad de servidor# Identificador de Animales - Proyecto Web 🐾
-
-
 ## Descripción del Proyecto
 El Identificador de Animales es una aplicación web minimalista e interactiva que permite a los usuarios subir imágenes de animales para obtener información detallada sobre ellos. Utilizando inteligencia artificial en el navegador, la aplicación identifica el animal y muestra características como su tipo, si es venenoso, hábitat natural, dieta y una descripción detallada.
 
@@ -35,7 +26,7 @@ El Identificador de Animales es una aplicación web minimalista e interactiva qu
 | Drag and Drop API   | Funcionalidad de arrastrar y soltar archivos   |
 
 ## Cómo Funciona
-1. **Sube una imagen** de un animal:  
+1. **Sube una imagen** de un animal:
    - Haz clic en el área designada  
    - O arrastra y suelta una imagen  
    *(Vista previa de la imagen seleccionada)*
