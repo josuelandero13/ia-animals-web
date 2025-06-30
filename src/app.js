@@ -41,6 +41,25 @@ document.addEventListener("DOMContentLoaded", () => {
   animalDescription = document.getElementById("animalDescription");
   animalImagePlaceholder = document.getElementById("animalImagePlaceholder");
 
+  // Botón para cargar nueva imagen
+  const newImageBtn = document.getElementById("newImageBtn");
+  if (newImageBtn) {
+    newImageBtn.addEventListener("click", () => {
+      // Oculta resultados y muestra la sección de carga
+      resultsSection.style.display = "none";
+      uploadSection.style.display = "flex";
+      // Limpia el input de archivo y la vista previa
+      fileInput.value = "";
+      previewImage.src = "";
+      previewImage.style.display = "none";
+      document.querySelector(
+        ".preview-container .placeholder-image"
+      ).style.display = "flex";
+      previewSection.style.display = "none";
+      errorDiv.style.display = "none";
+    });
+  }
+
   // Cargar el modelo
   loadModel();
 
